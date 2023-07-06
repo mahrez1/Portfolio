@@ -8,6 +8,9 @@ i18next.init({
             translation: {
               // English translations
               'header.title': 'My Portfolio',
+              'cv.title': 'Click here to download my CV',
+    'cv.link1': 'English CV',
+    'cv.link2': 'French CV',
               'about.title': 'About Me',
               'about.content': 'Engineering student, Working student, web development enthusiast, looking for new opportunities',
               'projects.title': 'Projects',
@@ -33,6 +36,9 @@ i18next.init({
           // Arabic translations
           // Arabic translations
     'header.title': 'ملف تعريفي عني',
+    'cv.title': 'انقر هنا لتحميل السيرة الذاتية',
+'cv.link1': 'السيرة الذاتية باللغة الإنجليزية',
+'cv.link2': 'السيرة الذاتية باللغة الفرنسية',
     'about.title': 'حولي',
     'about.content': 'طالب هندسة، طالب عامل، مهتم بتطوير الويب، أبحث عن فرص جديدة',
     'projects.title': 'المشاريع',
@@ -58,8 +64,11 @@ i18next.init({
         translation: {
           // French translations
           'header.title': 'Mon Portfolio',
+          'cv.title': 'Cliquez ici pour télécharger mon CV',
+'cv.link1': 'CV en anglais',
+'cv.link2': 'CV en français',
           'about.title': 'À Propos de Moi',
-          'about.content': 'Étudiant en génie, Étudiant travailleur, passionné de développement web, à la recherche de nouvelles opportunités',
+          'about.content': 'Étudiant en ingénierie informatique, Étudiant travailleur, passionné de développement web, à la recherche de nouvelles opportunités',
           'projects.title': 'Projets',
           'projects.project1.title': 'Projet 1 : Portfolio',
           'projects.project1.content': 'Une page web contenant des informations me concernant et certains projets que j\'ai développés ou que je développe actuellement',
@@ -107,6 +116,11 @@ i18next.init({
       document.getElementById('contactTitle').textContent = t('contact.title');
       document.getElementById('contactContent').textContent = t('contact.content');
       document.getElementById('footerText').textContent = t('footer.text');
+      const cvSection = document.getElementById('cv');
+      cvSection.querySelector('#cvTitle').textContent = t('cv.title');
+      const cvLinks = cvSection.querySelector('.cv-links');
+      cvLinks.querySelector('.cv-link:first-child').textContent = t('cv.link1');
+      cvLinks.querySelector('.cv-link:last-child').textContent = t('cv.link2');
     });
   }
   
